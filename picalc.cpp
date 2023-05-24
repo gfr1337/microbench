@@ -1,4 +1,4 @@
-#include "include/picalc.h"
+#include <picalc.h>
 #include <cmath>
 
 namespace picalc {

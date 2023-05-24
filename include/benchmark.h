@@ -1,4 +1,5 @@
 #ifndef BENCHMARK_H
+#include <picalc.h>
 
 namespace picalc {
     void benchmark(long long n); 
