@@ -6,3 +6,4 @@ namespace picalc {
 }
 
 #define BENCHMARK_HPP "0.1.0"
+#endif
