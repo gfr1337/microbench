@@ -1,5 +1,4 @@
 #ifndef PICALC_HPP
-#include "benchmark.hpp"
 #include <cstdint>
 #include <cmath>
 
