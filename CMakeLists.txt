@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.26)
 project(pisum)
-add_executable(pisum pisum.cpp benchmark.cpp)
+add_executable(pisum pisum.cpp picalc.cpp benchmark.cpp)
 find_package(fmt CONFIG REQUIRED)
 target_link_libraries(pisum fmt::fmt)

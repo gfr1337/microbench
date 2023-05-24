@@ -1,4 +1,4 @@
-#include "picalc.hpp"
+#include "benchmark.hpp"
 
 int main() {
     picalc::benchmark(100);
