@@ -3,7 +3,7 @@
 
 namespace picalc {
     template<typename F, typename R, typename I, typename A>
-        A mapreduce(F f, R r, I end, A acc) {
+        A mapreduce(F f, R r, const I &end, A acc) {
 #pragma clang loop vectorize(enable) interleave(enable)
             for(I i = 1; i <= end; i++) {
                 acc = r(acc, f(i));
