@@ -2,15 +2,12 @@
 #include <cmath>
 
 namespace picalc {
-    double invsq(double t) {
-        t = 1.0/t;
-        return t * t;
-    }
     double compute_pi2(int64_t e) {
         double acc = 0.0;
 #pragma clang loop vectorize(enable) interleave(enable)
         for(int64_t i = 1; i <= e; i++) {
-            acc += invsq(i);
+            double t = 1.0/i;
+            acc += t*t;
         }
         return 6.0*acc;
     }
