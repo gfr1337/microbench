@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 
-int main(int argc, char **argv) {
+int main() {
     std::cout << "C++\n";
     for(int i = 0; i < 10; i++) {
         picalc::benchmark(100, 30000000);
