@@ -1,8 +1,16 @@
 #ifndef PICALC_H
-#include <ranges>
 #include <cinttypes>
 
 namespace picalc {
+    template<typename F, typename I>
+        double sum(F f,  I end) {
+            double acc = 0.0;
+#pragma clang loop vectorize(enable) interleave(enable)
+            for(I i = 1; i <= end; i++) {
+                acc += f(i);
+            }
+            return acc;
+        }
     double compute_pi2(int64_t e);
     double compute_pi(int64_t e);
 }

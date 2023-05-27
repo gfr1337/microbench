@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.26)
 set(CMAKE_BUILD_TYPE Release)
+set(CXX_STANDARD 23)
 project(pisum)
 add_executable(pisum src/pisum.cpp)
 add_library(picalc src/picalc.cpp src/benchmark.cpp)

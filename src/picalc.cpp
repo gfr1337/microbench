@@ -2,13 +2,11 @@
 #include <cmath>
 
 namespace picalc {
+    static double sq(double t) {
+        return t*t;
+    }
     double compute_pi2(int64_t e) {
-        double acc = 0.0;
-        for(long long i = 1; i <= e; i++) {
-            double t = i;
-            acc += 1.0/(t*t);
-        }
-        return 6.0*acc;
+        return 6.0*sum([](int64_t i) { return sq(1.0/i); }, e);
     }
     double compute_pi(int64_t e) {
         return sqrt(compute_pi2(e));
