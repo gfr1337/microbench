@@ -1,6 +1,5 @@
 #ifndef BENCHMARK_H
 #include <cstdint>
-#include <picalc.h>
 
 namespace picalc {
     void benchmark(int64_t n, int64_t e); 

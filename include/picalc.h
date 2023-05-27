@@ -2,15 +2,15 @@
 #include <cinttypes>
 
 namespace picalc {
-    template<typename F, typename I>
-        double sum(F f,  I end) {
-            double acc = 0.0;
+    template<typename F, typename R, typename I, typename A>
+        A mapreduce(F f, R r, I end, A acc) {
 #pragma clang loop vectorize(enable) interleave(enable)
             for(I i = 1; i <= end; i++) {
-                acc += f(i);
+                acc = r(acc, f(i));
             }
             return acc;
         }
+    double invsq(double t);
     double compute_pi2(int64_t e);
     double compute_pi(int64_t e);
 }
