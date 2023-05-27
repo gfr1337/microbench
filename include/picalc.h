@@ -2,6 +2,7 @@
 #include <cinttypes>
 
 namespace picalc {
+    double compute_pi2(int64_t e);
     double compute_pi(int64_t e);
 }
 
