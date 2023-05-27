@@ -14,6 +14,8 @@ int main(int argc, char **argv) {
     }
     int64_t n = stoll(args.at(0));
     int64_t e = stoll(args.at(1));
-    picalc::benchmark(n, e);
+    for(int i = 0; i < n; i++) {
+        picalc::benchmark(100, e);
+    }
     return 0;
 }

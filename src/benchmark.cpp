@@ -13,6 +13,6 @@ namespace picalc {
         }
         auto b = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double, std::ratio<1, 1>> c = b-a;
-        fmt::print(std::cerr, "{} Seconds\n", c.count());
+        fmt::print(std::cout, "{} Seconds\n", c.count());
     }
 }
