@@ -12,8 +12,8 @@ int main(int argc, char **argv) {
         std::cerr << "less than 2 arguments given\n";
         exit(1);
     }
-    int64_t n = stoll(args[0]);
-    int64_t e = stoll(args[1]);
+    int64_t n = stoll(args.at(0));
+    int64_t e = stoll(args.at(1));
     picalc::benchmark(n, e);
     return 0;
 }

@@ -7,7 +7,12 @@ namespace picalc {
         return t * t;
     }
     double compute_pi2(int64_t e) {
-        return 6.0*mapreduce(invsq, [](double a, double b) { return a+b; }, e, 0.0);
+        double acc = 0.0;
+#pragma clang loop vectorize(enable) interleave(enable)
+        for(int64_t i = 1; i <= e; i++) {
+            acc += invsq(i);
+        }
+        return 6.0*acc;
     }
     double compute_pi(int64_t e) {
         return sqrt(compute_pi2(e));
