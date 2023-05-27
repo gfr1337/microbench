@@ -1,4 +1,5 @@
 #ifndef PICALC_H
+#include <ranges>
 #include <cinttypes>
 
 namespace picalc {
