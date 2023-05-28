@@ -5,8 +5,11 @@
 
 int main() {
     std::cout << "C++\n";
-    for(int i = 0; i < 10; i++) {
-        picalc::benchmark(100, 30000000);
+    int n = 2;
+    int e = 30000000;
+
+    for(int i = 0; i < n; i++) {
+        picalc::benchmark(100, e);
     }
     return 0;
 }
