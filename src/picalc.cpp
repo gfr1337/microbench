@@ -6,8 +6,7 @@ namespace picalc {
         double acc = 0.0;
 #pragma clang loop vectorize(enable) interleave(enable)
         for(int64_t i = 1; i <= e; i++) {
-            double t = 1.0/i;
-            acc += t*t;
+            acc += powx<double>(i, -2);
         }
         return 6.0*acc;
     }
