@@ -1,3 +1,4 @@
+#include <cinttypes>
 #include <benchmark.h>
 #include <iostream>
 #include <string>
@@ -5,11 +6,11 @@
 
 int main() {
     std::cout << "C++\n";
-    int n = 2;
-    int e = 30000000;
-
+    int64_t n = 10;
+    int64_t m = 100;
+    int64_t e = 30000000;
     for(int i = 0; i < n; i++) {
-        picalc::benchmark(100, e);
+        picalc::benchmark(m, e);
     }
     return 0;
 }
