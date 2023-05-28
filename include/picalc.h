@@ -4,9 +4,9 @@
 namespace picalc {
     template<typename T>
         T powp(T x, uint32_t n) {
-            T acc = x;
+            T acc = 1;
 #pragma clang loop vectorize(enable) interleave(enable)
-            for(int i = 2; i <= n; i++) {
+            for(int i = 1; i <= n; i++) {
                 acc *= x;
             }
             return acc;
